@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Bardwell Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <img id="card"  src="img/eyeball_card.png" alt="Project 1"></img>
+
+
+<!-- Header (Name and Bio)-->
+
+      <header><a href="index.html">Jack Bardwell</a>
+      <nav><a href="about.html">Info</a> | <a href="https://stories.jackbardwell.com" target="_blank"><font face="Wingdings">&</font></a></nav>
+      <br><font face="Wingdings">%</font> 
+      <br>Artist and Designer based in Rotterdam.<br>Currently working on internet radio culture and its spatial implications.
+      </header>
+
+<main>
+
+
+  <div class="container left">
+
+    <!-- Catagories-->
+
+    <select id="type-selector">
+      <option value="all">All</option>
+      <option value="Exhibition Design">Exhibition Design</option>
+      <option value="Art">Art</option>
+      <option value="Sound & Radio">Sound and Radio</option>
+      <option value="Education">Education</option>
+      <option value="Writing">Writing</option>
+      <option value="Moderation">Moderation</option>
+    </select>
+
+    <table class="filterable">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th class="type">Type</th>
+          <th class="type hide-on-medium">With</th>
+          <th class="type hide-on-small">Role</th>
+          <th class="type hide-on-small">Year</th>
+         <!-- <th class="type hide-on-big">Image</th> -->
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <!-- Project Row -->
+        <tr>
+          <td><a class="text" href="the_data_and_life_of_great_future_cities.html">The Data and Life of Great Future Cities</a></td>
+          <td class="type">Exhibition Design</td>
+          <td class="hide-on-medium" >Thomas.Matthews & Studio Woode</td>
+          <td class="hide-on-small" >Lead Designer</td>
+          <td class="hide-on-small" >2021</td>
+
+               <!-- Curator Talks-->
+        <tr>
+          <td><a class="text" href="https://www.architecturebiennalerotterdam2022.nl/en/about/theme" target="blank">↳ It's About Time – Curator Talks</a></td>
+          <td class="type">Sound & Radio</td>
+          <td class="hide-on-medium">International Architecture Biennale Rotterdam</td>
+          <td class="hide-on-small">Interviewer and Sound Designer</td>
+          <td class="hide-on-small">2022</td>
+        </tr>
+         
+         <!-- IF I want image on the home page as thumbnails 
+
+         <td class= "right"><div class="column hide-on-big" >
+                <a href="the_data_and_life_of_great_future_cities.html"> <img src="img/the_data_and_life/data_01_thumb.jpg" class="thumb" alt="The Data and Life of Great Future Cities"></a>
+              </div>
+              <div class="column hide-on-big"  >
+                <a href="the_data_and_life_of_great_future_cities.html"><img src="img/the_data_and_life/data_02_thumb.jpg" class="thumb" alt="The Data and Life of Great Future Cities"></a>
+              </div>
+              <div class="column hide-on-big" >
+                <a href="the_data_and_life_of_great_future_cities.html"><img src="img/the_data_and_life/data_02_thumb.jpg" class="thumb" alt="The Data and Life of Great Future Cities"></a>
+              </div>
+          </td>-->
+        </tr>
+
+            <!-- IFFR Interviews -->
+        <tr>
+          <td><a class="text" href="https://youtu.be/4udIq-0VWM8" target="blank">↳ RTM Interviews</a></td>
+          <td class="type">Moderation</td>
+          <td class="hide-on-medium">International Film Festival Rotterdam</td>
+          <td class="hide-on-small">Presenter</td>
+          <td class="hide-on-small">2023</td>
+        </tr>
+
+
+        <!-- Alternative Audio Guide -->
+        <tr>
+          <td><a class="text" href="alternative_audio_guide.html">Alternative Audio Guide</a></td>
+          <td class="type">Art</td>
+          <td class="hide-on-medium">Thomas Rustemeyer</td>
+          <td class="hide-on-small">Artist</td>
+          <td class="hide-on-small">2018</td>
+        </tr>
+
+
+        <!-- The School within the School -->
+        <tr>
+          <td><a class="text" href="the_school_within_the_school.html">The School Within the School</a></td>
+          <td class="type">Art</td>
+          <td class="hide-on-medium">Students of the KABK</td>
+          <td class="hide-on-small">Artist</td>
+          <td class="hide-on-small">2019</td>
+        </tr>
+
+        <!-- Home Improvements -->
+        <tr>
+          <td><a class="text" href="home_improvements.html">Home Improvements</a></td>
+          <td class="type">Art</td>
+          <td class="hide-on-medium">Friends</td>
+          <td class="hide-on-small">Artist</td>
+          <td class="hide-on-small">2017</td>
+        </tr>
+
+          <!-- Group Therapy -->
+        <tr>
+          <td><a class="text" href="group_therapy.html">Group Therapy</a></td>
+          <td class="type">Education</td>
+          <td class="hide-on-medium">KABK</td>
+          <td class="hide-on-small">Founder</td>
+          <td class="hide-on-small">2019-2023</td>
+        </tr>
+
+        <!-- Game Plan-->
+        <tr>
+          <td><a class="text" href="game_plan.html">Game Plan</a></td>
+          <td class="type">Exhibition Design</td>
+          <td class="hide-on-medium">Thomas.Matthews</td>
+          <td class="hide-on-small">Lead Designer</td>
+          <td class="hide-on-small">2016</td>
+        </tr>
+
+        <!-- City Sound Walks
+        <tr>
+          <td><a class="text" href="city_sound_walks.html">City Sound Walks</a></td>
+          <td class="type">Art</td>
+          <td class="hide-on-medium">Faber and Martina Mutzi</td>
+          <td class="hide-on-small">Artist</td>
+          <td class="hide-on-small">2022</td>
+        </tr>
+
+        -->
+
+          <!-- Home Cinema
+        <tr>
+          <td><a class="text" href="home_cinema.html">Home Cinema</a></td>
+          <td class="type">Art</td>
+          <td class="hide-on-medium">Neverland Cinema at MaMA</td>
+          <td class="hide-on-small">Artist</td>
+          <td class="hide-on-small">2020</td>
+        </tr>
+
+        -->
+
+        <!-- Flags of Vreewijk
+        <tr>
+          <td><a class="text" href="alternative_audio_guide.html">Vlaggen van Vreewijk</a></td>
+          <td class="type">Art</td>
+          <td class="hide-on-medium">Janneke Dirksen and Eros Chien</td>
+          <td class="hide-on-small">Artist</td>
+          <td class="hide-on-small">2022</td>
+        </tr>
+
+        -->
+
+          <!-- The Radio School-->
+        <tr>
+          <td><a class="text" href="https://www.mixcloud.com/TheRadioSchool/" target="blank">↳ The Radio School, Rijeka</a></td>
+          <td class="type">Sound & Radio</td>
+          <td class="hide-on-medium">Future Architecture Platform</td>
+          <td class="hide-on-small">Broadcaster</td>
+          <td class="hide-on-small">2020</td>
+        </tr>
+
+     <!-- Good Times Band Times-->
+        <tr>
+          <td><a class="text" href="https://goodtimesbadtimes.club/" target="_blank">↳ Good Times Bad Times</a></td>
+          <td class="type">Sound & Radio</td>
+          <td class="hide-on-medium">Benjamin Earl and Kirsten Spruit</td>
+          <td class="hide-on-small">Co-founder</td>
+          <td class="hide-on-small">2019–On Going</td>
+        </tr>
+
+
+     <!-- Where the Water Flows
+        <tr>
+          <td><a class="text" href="alternative_audio_guide.html">Where the Water Flows</a></td>
+          <td class="type">Art</td>
+          <td class="hide-on-medium">Floating University, Berlin</td>
+          <td class="hide-on-small">Artist</td>
+          <td class="hide-on-small">2018</td>
+        </tr>
+        -->
+
+        <!-- Where the Water Flows – Story
+        <tr>
+          <td><a class="text" href="alternative_audio_guide.html">Where the Water Flows - Short Story</a></td>
+          <td class="type">Writing</td>
+          <td class="hide-on-medium">Floating University, Berlin</td>
+          <td class="hide-on-small">Artist</td>
+          <td class="hide-on-small">2018</td>
+        </tr>
+
+        -->
+
+        <!-- Mushroom Radio-->
+        <tr>
+          <td><a class="text" href="https://radiomushroom.org/" target="_blank">↳ Mushroom Radio</a></td>
+          <td class="type">Sound & Radio</td>
+          <td class="hide-on-medium">Benjamin Earl and Esther Vane</td>
+          <td class="hide-on-small">Co-Founder</td>
+          <td class="hide-on-small">2018</td>
+        </tr>
+
+        <!-- Robida Radio-->
+        <tr>
+          <td><a class="text" href="https://www.robidacollective.com/projects/radio-robida" target="_blank">↳ Radio Robida</a></td>
+          <td class="type">Sound & Radio</td>
+          <td class="hide-on-medium">Robida Collective</td>
+          <td class="hide-on-small">Facilitator</td>
+          <td class="hide-on-small">2021</td>
+        </tr>
+
+        <!-- Street Stories-->
+        <tr>
+          <td><a class="text" href="https://www.designcouncil.org.uk/our-work/news-opinion/ones-watch-street-stories/" target="_blank">↳ Street Stories</a></td>
+          <td class="type">Writing</td>
+          <td class="hide-on-medium">Design Council</td>
+          <td class="hide-on-small">Writer</td>
+          <td class="hide-on-small">2017</td>
+        </tr>
+
+        <!-- Site Specific
+        <tr>
+          <td><a class="text" href="alternative_audio_guide.html">Site Specific</a></td>
+          <td class="type">Art</td>
+          <td class="hide-on-medium">Holy Ghost and Joss Gray</td>
+          <td class="hide-on-small">Artist</td>
+          <td class="hide-on-small">2012</td>
+        </tr>
+-->
+
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+      <!-- Column on right for chat room lols-->
+
+
+  <div class="container chat">
+    This site is a living thing, constantly under construction as I remember projects, update the archive and correct spelling mistakes. Feel free to leave me a note or a question and I'll come on here to reply. 
+
+                <div style="height: 80%; margin-top:1px; background: #57e3bb;">
+                <script id="cid0020000337306453779" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;">{"handle":"jackssite","arch":"js","styles":{"a":"57e3bb","b":100,"c":"808080","d":"808080","e":"57e3bb","g":"808080","h":"57e3bb","j":"808080","k":"808080","l":"808080","m":"CC0000","n":"FFFFFF","p":"10","q":"57e3bb","r":100,"t":0,"ab":false,"usricon":0,"sbc":"808080","surl":0,"allowpm":0,"fwtickm":1}}</script>
+                </div>
+
+              </div>
+
+<!--<script id="cid0020000337298632379" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;">{"handle":"jackssite","arch":"js","styles":{"a":"57e3bb","b":100,"c":"000000","d":"000000","k":"57e3bb","l":"57e3bb","m":"57e3bb","p":"10","q":"57e3bb","r":100,"t":0,"usricon":0,"surl":0,"allowpm":0,"fwtickm":1}}</script>-->
+
+</div>
+
+  </main>
+
+  <footer>
+    
+This site was made by Jack Bardwell with some intial help from Chat GPT and lots of help from friends in and of <a href="https://extrapractice.space" target="_blank">Extra Practice</a> Studio, Thank you.
+
+  </footer>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+
+
+</html>

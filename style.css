@@ -1,0 +1,325 @@
+
+
+header{
+  font-family: "FreeSerif", "Times New Roman", times, serif;
+  font-size: 22px;
+  padding-top:20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 26px;
+     /* -webkit-font-smoothing: none;
+/*position: sticky;*/
+/*top: 0px;*/
+/*border: 1px;*/
+}
+
+nav {
+float: right;
+}
+
+header a, nav a {
+text-decoration: none;
+cursor: pointer;
+color: black;
+}
+
+nav a {
+border-bottom: dotted 1px black;
+}
+
+footer {
+    color: grey;
+    display: table-row;
+    height: 65px;
+    width: 100%;
+    float: left;
+    padding: 20px;
+}
+
+/* Sets all styles to have border-box meaning the size takes into account the margin padding etc. and all backgrounds to grey*/
+* {
+  box-sizing: border-box; 
+/*   background-color: white;*/
+background-color: rgba(255, 255, 250);
+
+}
+
+a.text {
+  border-bottom: dotted 1px black;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+.container {
+  width: 80%;
+  padding: 20px;
+  float: left;
+}
+
+.container.projects {
+  width: 100%;
+}
+
+.container.left {
+width: 75%;
+
+}
+
+
+.container.chat {
+  width: 25%;
+  height: 500px;
+  background-color: #57e3bb;
+  border-radius: 10px;
+  color: grey;
+  margin-top: 70px;
+  margin-bottom: 20px;
+
+}
+
+.row:after {
+
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.medium
+{ 
+  font-family: "FreeSerif", "Times New Roman", times, serif;
+  font-size: 18px;
+  font-style: bold;
+  margin-top:0px;
+  margin-bottom: 30px;
+  font-weight: normal;
+  width:100;
+
+}
+
+/* Eyeball Card Styling */
+
+#card {
+  visibility: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  cursor: move;
+  position:absolute;
+  top: 300px;
+  left: 500px;
+  transform: rotate(5deg);
+  z-index: 100;
+}
+
+
+/* Table styling */
+table {
+  border-spacing: 0px;
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+/* Table data and Table header styling */
+td, th {
+  border-bottom: 1px solid grey; /* Add a hairline between each row */
+  border-top: solid 1px grey;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px; /* Increase cell padding */
+  text-align: left;
+  vertical-align: top;
+
+
+
+}
+/* and a third time here?*/
+
+th {
+  font-size: 18px;
+  border-top: 1px solid grey;
+  font-weight: normal;
+}
+
+tbody {
+
+  font-family: "FreeSerif", "Times New Roman", times, serif;
+  font-size: 18px;
+}
+
+
+/* Thumbnail image size */
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 4px;
+}
+
+img {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+/* Project page styling */
+
+.row {
+  overflow: hidden;
+  width: 100%;
+}
+
+
+.column_project {
+  display: block;
+  padding-top: 20px;
+  padding-right: 20px;
+  float: left;
+  width: 50%;
+  font-size: 18px;
+  line-height: 24px;
+  border-top: 1px solid grey;
+  overflow: hidden;
+
+}
+
+.right {
+  padding-right: 0px;
+}
+
+.details {
+font-size: 18px;
+font-style: italic;
+border-top: 1px solid grey;
+padding-top: 16px;
+}
+
+.cv {
+border-top: none;
+}
+
+
+/* Drop Down and Back button Styling */
+
+#back {
+  font-size: 14px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 0px;
+  border: 1px solid grey;
+  padding-right: 40px;
+}
+
+
+
+#type-selector {
+
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding:5px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+
+/* Filterable table */
+/* Add the "filter" class to the input field to enable filtering */
+.filterable input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+
+
+}
+
+/* Style the filterable table */
+.filterable {
+  margin-bottom: 10px;
+  border-top: solid 1px grey;
+}
+
+
+.cursor {
+  cursor: pointer;
+}
+
+
+.thumb {
+  width: 100%;
+  max-width: 150px;
+  min-width: 90px;
+
+}
+
+.column_cv {
+
+  display: block;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  float: left;
+  width: 50%;
+  font-size: 18px;
+  line-height: 22px;
+  overflow: hidden;
+}
+
+.left_cv {
+  width: 20%;
+  font-size: 18px;
+
+}
+
+.right_cv {
+  width: 80%;
+}
+
+li {
+  list-style-position: outside;
+}
+
+/* Responsive styling */
+@media (max-width: 500px) {
+
+    .hide-on-small {
+        display: none;
+    }
+
+    #card {
+      display: none;
+    }
+
+}
+
+/* Responsive styling */
+@media (max-width: 740px) {
+
+    .hide-on-medium {
+        display: none;
+    }
+
+    .column_project {
+    width: 100%;
+  }
+
+}
+
+/* Responsive styling */
+@media (max-width: 1100px) {
+
+    .hide-on-big {
+        display: none;
+    }
+
+    .container.chat{
+      width:100%;
+        margin-top: 20px;
+    }
+
+    .container.left {
+    width: 100%;
+    }
+
+}
+
