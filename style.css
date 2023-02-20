@@ -12,12 +12,12 @@
 
 header{
   font-family: "Starling", times, serif;
-  font-size: 22px;
+  font-size: 20px;
   padding-top:20px;
   padding-bottom: 30px;
   padding-left: 20px;
   padding-right: 20px;
-  line-height: 28px;
+  line-height: 26px;
   color:#0F0F0F;
      /* -webkit-font-smoothing: none;
 /*position: sticky;*/
@@ -141,6 +141,7 @@ td, th {
   padding-bottom: 20px; /* Increase cell padding */
   text-align: left;
   vertical-align: top;
+  line-height: 24px;
 
 
 
