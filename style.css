@@ -1,13 +1,24 @@
+@font-face {
+  font-family: "starling";
+  src: url("fonts/Starling-Book.woff") format('woff');
+}
+
+@font-face {
+  font-family: "starling";
+  src: url("fonts/Starling-BookItalic") format('woff');
+  font-style: italic;
+}
 
 
 header{
-  font-family: "FreeSerif", "Times New Roman", times, serif;
+  font-family: "Starling", times, serif;
   font-size: 22px;
   padding-top:20px;
   padding-bottom: 30px;
   padding-left: 20px;
   padding-right: 20px;
-  line-height: 26px;
+  line-height: 28px;
+  color:#0F0F0F;
      /* -webkit-font-smoothing: none;
 /*position: sticky;*/
 /*top: 0px;*/
@@ -21,11 +32,11 @@ float: right;
 header a, nav a {
 text-decoration: none;
 cursor: pointer;
-color: black;
+color: #0F0F0F;
 }
 
 nav a {
-border-bottom: dotted 1px black;
+border-bottom: dotted 1px #0F0F0F;
 }
 
 footer {
@@ -46,10 +57,10 @@ background-color: rgba(255, 255, 250);
 }
 
 a.text {
-  border-bottom: dotted 1px black;
+  border-bottom: dotted 1px #0F0F0F;
   text-decoration: none;
   cursor: pointer;
-  color: black;
+  color: #0F0F0F;
 }
 
 .container {
@@ -88,7 +99,7 @@ width: 75%;
 
 .medium
 { 
-  font-family: "FreeSerif", "Times New Roman", times, serif;
+  font-family: "FreeSerif", "Starling", times, serif;
   font-size: 18px;
   font-style: bold;
   margin-top:0px;
@@ -144,7 +155,7 @@ th {
 
 tbody {
 
-  font-family: "FreeSerif", "Times New Roman", times, serif;
+  font-family: "FreeSerif", "Starling", times, serif;
   font-size: 18px;
 }
 
@@ -261,7 +272,7 @@ border-top: none;
   float: left;
   width: 50%;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 24px;
   overflow: hidden;
 }
 
