@@ -88,6 +88,7 @@ width: 75%;
 
 
 .container.chat {
+  font-family: "Starling", times, serif;
   width: 25%;
   height: 500px;
   background-color: #57e3bb;
