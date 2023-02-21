@@ -143,6 +143,7 @@ table {
 
 /* Table data and Table header styling */
 td, th {
+  font-family: "Starling", times, serif;
   border-bottom: 1px solid grey; /* Add a hairline between each row */
   border-top: solid 1px grey;
   padding-right: 20px;
