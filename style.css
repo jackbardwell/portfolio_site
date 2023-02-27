@@ -91,7 +91,7 @@ width: 75%;
   font-family: "Starling", times, serif;
   width: 25%;
   height: 500px;
-  border-top: solid 1px;
+  border: solid 1px;
   color: #FF8000;
   margin-top: 70px;
   margin-bottom: 20px;
