@@ -238,6 +238,8 @@ border-top: none;
 
 #type-selector {
 
+  font-color: #0F0F0F;
+  font-family: "Starling", times, serif;
   font-size: 14px;
   margin-bottom: 20px;
   padding:5px;
@@ -332,6 +334,12 @@ li {
 
   .container.chat {
     display: none;
+  }
+
+  .container.projects {
+
+    padding-left: 5px;
+    padding-right: 0px;
   }
 
     
