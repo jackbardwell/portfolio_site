@@ -330,6 +330,10 @@ li {
 
   }
 
+  .container.chat {
+    display: none;
+  }
+
     
 }
 
