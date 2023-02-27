@@ -211,6 +211,7 @@ img {
 }
 
 .details {
+font-family: "Starling", times, serif;
 font-size: 18px;
 font-style: italic;
 border-top: 1px solid grey;
