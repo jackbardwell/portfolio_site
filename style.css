@@ -314,7 +314,7 @@ li {
       display: none;
     }
 
-    #container {
+    .container {
       padding: 5px;
     
     }
@@ -331,7 +331,6 @@ li {
   }
 
     
-
 }
 
 /* Responsive styling */
