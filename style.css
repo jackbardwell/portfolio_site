@@ -314,7 +314,7 @@ li {
       display: none;
     }
 
-    .container {
+    .container.left {
       padding: 5px;
     
     }
