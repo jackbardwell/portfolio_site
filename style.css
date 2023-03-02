@@ -26,6 +26,11 @@ header{
 /*border: 1px;*/
 }
 
+p {
+font-family: "Starling", times, serif;
+  
+}
+
 nav {
 float: right;
 }
