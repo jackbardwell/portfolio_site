@@ -34,7 +34,7 @@ window.addEventListener('load', function(){
       var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
       elmnt.onmousedown = dragMouseDown;
     
-       // Generate random position for the element when page loads
+       // Centre Position on Page load
         elmnt.style.top = "50%";
         elmnt.style.left = "50%";
     
