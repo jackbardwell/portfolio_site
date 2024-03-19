@@ -18,15 +18,27 @@ window.addEventListener('load', function(){
     });
 
 
-    function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  elmnt.onmousedown = dragMouseDown;
+    //PREVIOUS EYE BALL
+    //function dragElement(elmnt) {
+  //var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  //elmnt.onmousedown = dragMouseDown;
 
    // Generate random position for the element when page loads
-    elmnt.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
-    elmnt.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+    //elmnt.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+   // elmnt.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
 
-    elmnt.style.visibility = "visible";
+    //elmnt.style.visibility = "visible";
+
+    //SKETCH TEST
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      elmnt.onmousedown = dragMouseDown;
+    
+       // Generate random position for the element when page loads
+        elmnt.style.top = "50%";
+        elmnt.style.left = "50%";
+    
+        elmnt.style.visibility = "visible";
 
 
   function dragMouseDown(e) {
