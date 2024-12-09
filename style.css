@@ -36,8 +36,8 @@ nav{
   border-radius: 10px;
   padding-left: 20px;
   padding-top: 20px;
-  height: 11rem;
-  width: 30rem;
+  height: 180px;
+  width: 480px;
 }
 
 p {
@@ -401,6 +401,17 @@ li {
     padding-right: 0px;
   }
 
+  .sticker {
+    background-color: yellow;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 180px;
+    width: 92%;
+  }
+
+
+
     
 }
 
@@ -413,6 +424,14 @@ li {
 
     .column_project {
     width: 100%;
+  }
+  .sticker {
+    background-color: yellow;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 180px;
+    width: 92%;
   }
 
 }
