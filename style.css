@@ -20,10 +20,15 @@ header{
   line-height: 26px;
   color:#0F0F0F;
   width: 100%;
+  text-align: top;
      /* -webkit-font-smoothing: none;
 /*position: sticky;*/
 /*top: 0px;*/
 /*border: 1px;*/
+}
+
+nav{
+  align: top;
 }
 
 .sticker {
