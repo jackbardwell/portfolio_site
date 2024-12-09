@@ -30,12 +30,12 @@ window.addEventListener('load', function(){
     //elmnt.style.visibility = "visible";
 
     //SKETCH TEST
-    function dragElement(elmnt) {
-      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      elmnt.onmousedown = dragMouseDown;
+    //function dragElement(elmnt) {
+      //var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      //elmnt.onmousedown = dragMouseDown;
   
     
-        elmnt.style.visibility = "visible";
+        //elmnt.style.visibility = "visible";
 
 
   function dragMouseDown(e) {
