@@ -11,7 +11,7 @@
 
 
 header{
-  font-family: "Starling", times, serif;
+  font-family: helvetica neue, helvetica, sans-serif;;
   font-size: 20px;
   padding-top:20px;
   padding-bottom: 30px;
@@ -27,7 +27,7 @@ header{
 }
 
 p {
-font-family: "Starling", times, serif;
+font-family: helvetica neue, helvetica, sans-serif;;
   
 }
 
@@ -46,7 +46,7 @@ border-bottom: dotted 1px #0F0F0F;
 }
 
 footer {
-    font-family: "Starling", times, serif;
+    font-family: helvetica neue, helvetica, sans-serif;;
     color: grey;
     display: table-row;
     height: 65px;
@@ -93,7 +93,7 @@ width: 75%;
 
 
 .container.chat {
-  font-family: "Starling", times, serif;
+  font-family: helvetica neue, helvetica, sans-serif;;
   width: 25%;
   height: 500px;
   border: solid 1px;
@@ -112,7 +112,7 @@ width: 75%;
 
 .medium
 { 
-  font-family: "Starling", times, serif;
+  font-family: helvetica neue, helvetica, sans-serif;;
   font-size: 18px;
   font-style: bold;
   margin-top:0px;
@@ -173,7 +173,7 @@ table {
 
 /* Table data and Table header styling */
 td, th {
-  font-family: "Starling", times, serif;
+  font-family: helvetica neue, helvetica, sans-serif;;
   border-bottom: 1px solid grey; /* Add a hairline between each row */
   border-top: solid 1px grey;
   padding-right: 20px;
@@ -196,7 +196,7 @@ th {
 
 tbody {
 
-  font-family: "Starling", times, serif;
+  font-family: helvetica neue, helvetica, sans-serif;;
   font-size: 18px;
 }
 
@@ -223,7 +223,7 @@ img {
 
 
 .column_project {
-  font-family: "Starling", times, serif;
+  font-family: helvetica neue, helvetica, sans-serif;;
   display: block;
   padding-top: 20px;
   padding-right: 20px;
@@ -241,7 +241,7 @@ img {
 }
 
 .details {
-font-family: "Starling", times, serif;
+font-family: helvetica neue, helvetica, sans-serif;;
 font-size: 18px;
 font-style: italic;
 border-top: 1px solid grey;
@@ -257,7 +257,7 @@ border-top: none;
 
 #back {
   font-color: #0F0F0F;
-  font-family: "Starling", times, serif;
+  font-family: helvetica neue, helvetica, sans-serif;;
   font-size: 14px;
   margin-bottom: 20px;
   cursor: pointer;
@@ -272,7 +272,7 @@ border-top: none;
 #type-selector {
 
   font-color: #0F0F0F;
-  font-family: "Starling", times, serif;
+  font-family: helvetica neue, helvetica, sans-serif;;
   font-size: 14px;
   margin-bottom: 20px;
   padding:5px;
@@ -313,7 +313,7 @@ border-top: none;
 
 .column_cv {
 
-  font-family: "Starling", times, serif;
+  font-family: helvetica neue, helvetica, sans-serif;;
   display: block;
   padding-bottom: 20px;
   padding-right: 20px;
