@@ -36,7 +36,7 @@ nav{
   border-radius: 10px;
   padding-left: 20px;
   padding-top: 20px;
-  height: 10rem;
+  height: 11rem;
   width: 30rem;
 }
 
@@ -88,6 +88,15 @@ a.text {
   text-decoration: none;
   cursor: pointer;
   color: #0F0F0F;
+}
+
+a {
+  border-bottom: dotted 1px #0F0F0F;
+  text-decoration: none;
+  cursor: pointer;
+  color: #0F0F0F;
+  background-color: transparent;
+
 }
 
 .container {
