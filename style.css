@@ -128,7 +128,7 @@ width: 75%;
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Offset by half the image dimensions to truly center */
   background: #fff; /* Optional: Add a white background for better visibility */
-  padding: 10px; /* Optional: Add some padding around the image */
+  padding: 12px; /* Optional: Add some padding around the image */
   border: 1px solid #ccc; /* Optional: Add a border */
   border-radius: 8px; /* Optional: Round the corners */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
