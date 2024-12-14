@@ -114,6 +114,37 @@ width: 75%;
 
 }
 
+/* Hover Image Pop-up*/
+
+.hover_img a {
+  position: relative;
+}
+
+.hover_img a span {
+  position: fixed; /* Position relative to the viewport */
+  display: none; /* Initially hide the image */
+  z-index: 99;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset by half the image dimensions to truly center */
+  background: #fff; /* Optional: Add a white background for better visibility */
+  padding: 10px; /* Optional: Add some padding around the image */
+  border: 1px solid #ccc; /* Optional: Add a border */
+  border-radius: 8px; /* Optional: Round the corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
+}
+
+.hover_img a span img {
+  max-width: 80vw; /* Scale image to fit within 80% of the viewport width */
+  max-height: 80vh; /* Scale image to fit within 80% of the viewport height */
+  display: block; /* Removes extra space reserved for inline images */
+  margin: 0; /* Ensures no margin around the image */
+}
+
+.hover_img a:hover span {
+  display: block; /* Show the image on hover */
+}
+
 
 .container.chat {
   font-family: helvetica neue, helvetica, sans-serif;;
@@ -157,7 +188,7 @@ width: 75%;
   width: 5rem;
   position:absolute;
   margin-left: 100px;
-  z-index: 100;
+  z-index: 80;
   transform: rotate(-5deg);
 }
 
