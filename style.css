@@ -189,7 +189,7 @@ width: 75%;
   position:absolute;
   margin-left: 100px;
   z-index: 80;
-  transform: rotate(-5deg);
+  transform: rotate(random);
 }
 
 /* OLD Eyeball Card Styling */
