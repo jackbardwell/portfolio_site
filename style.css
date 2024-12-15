@@ -189,7 +189,7 @@ width: 75%;
   position:absolute;
   margin-left: 100px;
   z-index: 80;
-  transform: rotate(random);
+  transform: rotate(-5deg);
 }
 
 /* OLD Eyeball Card Styling */
@@ -446,6 +446,9 @@ li {
 
 /* Responsive styling */
 @media (max-width: 740px) {
+
+  html { font-size: 10px;
+  }
 
     .hide-on-medium {
         display: none;
