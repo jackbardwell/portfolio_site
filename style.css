@@ -398,8 +398,6 @@ li {
 /* Responsive styling */
 @media (max-width: 500px) {
 
-  html { font-size: 10px;
-  }
 
     .hide-on-small {
         display: none;
