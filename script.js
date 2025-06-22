@@ -17,7 +17,7 @@
     } catch (error) {
       console.error('Error fetching Are.na content:', error);
     }
-  }
+}
 
   // Replace with your channel slug
   fetchArenaChannel('jack-bardwell-i-would-like-to');
