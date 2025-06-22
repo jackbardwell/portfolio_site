@@ -1,26 +1,26 @@
-  async function fetchLatestArenaBlock(channelSlug) {
-    const apiUrl = `https://api.are.na/v2/channels/${channelSlug}?per=1`;
+async function fetchLatestArenaBlock(channelSlug) {
+  const apiUrl = `https://api.are.na/v2/channels/${channelSlug}?per=1`;
 
-    try {
-      const response = await fetch(apiUrl);
-      const data = await response.json();
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
 
-      const latestBlock = data.contents[0];
-      const targetDiv = document.querySelector('.sticker_3');
+    const latestBlock = data.contents[0];
+    const targetDiv = document.querySelector('.sticker_3');
 
-      if (latestBlock.class === 'Text') {
-        targetDiv.textContent = latestBlock.content;
-      } else {
-        targetDiv.textContent = `Latest block is not text (type: ${latestBlock.class})`;
-      }
-
-    } catch (error) {
-      console.error('Error fetching Are.na content:', error);
+    if (latestBlock.class === 'Text') {
+      targetDiv.textContent = latestBlock.content;
+    } else {
+      targetDiv.textContent = `Latest block is not text (type: ${latestBlock.class})`;
     }
+
+  } catch (error) {
+    console.error('Error fetching Are.na content:', error);
+  }
 }
 
   // Replace with your channel slug
-  fetchLatestArenaChannel('jack-bardwell-i-would-like-to');
+  fetchLatestArenaBlock('jack-bardwell-i-would-like-to');
   
 
 
