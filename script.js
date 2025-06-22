@@ -20,7 +20,7 @@ async function fetchLatestArenaBlock(channelSlug) {
 }
 
   // Replace with your channel slug
-  fetchLatestArenaBlock('jack-bardwell-i-would-like-to');
+  fetchLatestArenaBlock('i-would-like-to');
   
 
 
