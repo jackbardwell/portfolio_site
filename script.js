@@ -20,7 +20,7 @@
 }
 
   // Replace with your channel slug
-  fetchArenaChannel('jack-bardwell-i-would-like-to');
+  fetchLatestArenaChannel('jack-bardwell-i-would-like-to');
 
 
 window.addEventListener('load', function() {
