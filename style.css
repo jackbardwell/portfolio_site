@@ -58,6 +58,7 @@ nav{
     background-color: none;
     font-size: 16px;
     border: solid;
+    border-width: thin;
     border-color: blue;
     border-radius: 10px;
     padding: 10px;
@@ -70,6 +71,7 @@ nav{
     background-color: none;
     font-size: 16px;
     border: solid;
+    border-width: thin;
     border-color: green;
     border-radius: 10px;
     padding: 10px;
