@@ -1,4 +1,4 @@
-async function fetchLatestArenaBlock(channelSlug) {
+/* async function fetchLatestArenaBlock(channelSlug) {
   const apiUrl = `https://api.are.na/v2/channels/${channelSlug}?per=1`;
 
   try {
@@ -21,7 +21,34 @@ async function fetchLatestArenaBlock(channelSlug) {
 
   // Replace with your channel slug
   fetchLatestArenaBlock('i-would-like-to');
+ */
 
+  function fetchArenaBlocks(channelSlug, blockCount = 2) {
+  const apiUrl = `https://api.are.na/v2/channels/${channelSlug}?per=${blockCount}`;
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      const textBlocks = data.contents
+        .filter(block => block.class === 'Text')
+        .slice(0, blockCount);
+
+      const sticker3 = document.querySelector('.sticker_3');
+      sticker3.innerHTML = ''; // Clear existing content
+
+      textBlocks.forEach(block => {
+        const p = document.createElement('p');
+        p.textContent = block.content || '(Empty block)';
+        sticker3.appendChild(p);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching Are.na content:', error);
+    });
+}
+
+// Call it:
+fetchArenaBlocks('i-would-like-to', 2);
 
 window.addEventListener('load', function() {
   var typeSelector = document.getElementById("type-selector");
