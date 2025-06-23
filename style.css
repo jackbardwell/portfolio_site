@@ -33,7 +33,7 @@ nav{
 
 .stickers {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   gap: 15px;
 }
 
