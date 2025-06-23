@@ -33,8 +33,15 @@ nav{
 
 .stickers {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: row;
   gap: 15px;
+  align-items: flex-start;
+}
+
+.sticker-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .sticker {
@@ -498,6 +505,10 @@ li {
     padding-top: 20px;
     height: 180px;
     width: 92%;
+  }
+
+  .stickers {
+    flex-direction: column;
   }
 
 }
