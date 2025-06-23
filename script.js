@@ -1,5 +1,5 @@
 async function fetchLatestArenaBlock(channelSlug) {
-  const apiUrl = `https://api.are.na/v2/channels/${channelSlug}?per=1`;
+  const apiUrl = `https://api.are.na/v2/channels/${channelSlug}?per=2`;
 
   try {
     const response = await fetch(apiUrl);
@@ -20,8 +20,7 @@ async function fetchLatestArenaBlock(channelSlug) {
 }
 
   // Replace with your channel slug
-  fetchLatestArenaBlock('i-would-like-to');
-  
+  fetchLatestArenaBlock('i-would-like-to', 2);
 
 
 window.addEventListener('load', function() {
