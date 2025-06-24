@@ -64,7 +64,7 @@ nav{
 .stickers-column {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 10px; !important;
   flex: 1 1 300px; /* growable and shrinkable */
   min-width: 300px;
   max-width: 480px;
