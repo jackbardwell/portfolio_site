@@ -9,6 +9,10 @@
   font-style: italic;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 
 header{
   font-family: helvetica neue, helvetica, sans-serif;;
@@ -31,54 +35,59 @@ nav{
   align: top;
 }
 
+/* Main container */
 .stickers {
   display: flex;
-  flex-direction: row;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 30px; /* gutter between columns */
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
-.sticker-column {
-  display: flex;
-  flex-direction: row wrap;
-  gap: 10px;
+/* Left fixed column */
+.fixed-column {
+  flex: 0 0 480px; /* fixed width */
+  max-width: 480px;
 }
 
+/* Left sticker */
 .sticker {
   background-color: yellow;
   border-radius: 10px;
-  padding-left: 20px;
-  padding-top: 20px;
-  height: 180px;
-  width: 480px;
-
+  padding: 20px;
+  width: 100%;
+  min-height: 180px;
+  box-sizing: border-box;
 }
 
-    .sticker_2 {
-    background-color: none;
-    font-size: 16px;
-    border: solid;
-    border-width: thin;
-    border-color: blue;
-    border-radius: 10px;
-    padding: 10px;
-    height: fit-content;
-    color: blue;
-    
-  }
+/* Right columns */
+.stickers-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 300px; /* growable and shrinkable */
+  min-width: 300px;
+  max-width: 480px;
+  box-sizing: border-box;
+}
 
-      .sticker_3 {
-    background-color: none;
-    font-size: 16px;
-    border: solid;
-    border-width: thin;
-    border-color: green;
-    border-radius: 10px;
-    padding: 10px;
-    height: fit-content;
-    color:green;
-    
-  }
+/* Blue "Working on" stickers */
+.sticker_2 {
+  font-size: 16px;
+  border: thin solid blue;
+  border-radius: 10px;
+  padding: 10px;
+  color: blue;
+}
+
+/* Green "I would like to" stickers */
+.sticker_3 {
+  font-size: 16px;
+  border: thin solid green;
+  border-radius: 10px;
+  padding: 10px;
+  color: green;
+}
 
 p {
 font-family: helvetica neue, helvetica, sans-serif;;
@@ -500,18 +509,20 @@ li {
     .column_project {
     width: 100%;
   }
-  .sticker {
-    background-color: yellow;
-    border-radius: 10px;
-    padding-left: 20px;
-    padding-top: 20px;
-    height: 180px;
-    width: 92%;
-  }
 
-  .stickers {
+.stickers {
     flex-direction: column;
   }
+
+  .stickers-column {
+    max-width: 100%;
+  }
+
+    .fixed-column {
+    width: 100%;
+    max-width: 100%;
+  }
+  
 
 }
 

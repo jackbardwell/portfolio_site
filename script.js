@@ -23,7 +23,7 @@
   fetchLatestArenaBlock('i-would-like-to');
  */
 
-  function fetchArenaBlocks(channelSlug, blockCount = 2) {
+function fetchArenaBlocks(channelSlug, blockCount = 3) {
   const apiUrl = `https://api.are.na/v2/channels/${channelSlug}?per=${blockCount}`;
 
   fetch(apiUrl)
@@ -33,13 +33,16 @@
         .filter(block => block.class === 'Text')
         .slice(0, blockCount);
 
-      const sticker3 = document.querySelector('.sticker_3');
-      sticker3.innerHTML = ''; // Clear existing content
+      const arenaColumn = document.querySelector('.arena-column');
+      // Remove old .sticker_3 blocks only, leave the "I would like to" heading
+      const oldStickers = arenaColumn.querySelectorAll('.sticker_3');
+      oldStickers.forEach(el => el.remove());
 
       textBlocks.forEach(block => {
-        const p = document.createElement('p');
-        p.textContent = block.content || '(Empty block)';
-        sticker3.appendChild(p);
+        const div = document.createElement('div');
+        div.classList.add('sticker_3');
+        div.textContent = block.content || '(Empty block)';
+        arenaColumn.appendChild(div);
       });
     })
     .catch(error => {
@@ -47,8 +50,7 @@
     });
 }
 
-// Call it:
-fetchArenaBlocks('i-would-like-to', 2);
+fetchArenaBlocks('i-would-like-to', 3);
 
 window.addEventListener('load', function() {
   var typeSelector = document.getElementById("type-selector");
