@@ -515,12 +515,13 @@ li {
   }
 
   .stickers-column {
-    max-width: 100%;
+    display: none;
   }
 
     .fixed-column {
     width: 100%;
-    max-width: 100%;
+    max-width: 90%;
+    max-height: 200px;
   }
   
 
