@@ -55,9 +55,9 @@ nav{
   background-color: yellow;
   border-radius: 10px;
   padding: 20px;
-  width: 100%;
   min-height: 180px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Right columns */
@@ -120,13 +120,6 @@ footer {
     padding: 20px;
 }
 
-/* Sets all styles to have border-box meaning the size takes into account the margin padding etc. and all backgrounds to grey*/
-* {
-  box-sizing: border-box; 
-/*   background-color: white;*/
-background-color: rgba(255, 255, 250);
-
-}
 
 main {
   padding-right: 15px;
@@ -491,9 +484,7 @@ li {
     height: 180px;
     width: 92%;
   }
-
-
-
+  
 
     
 }
@@ -505,6 +496,26 @@ li {
     .hide-on-medium {
         display: none;
     }
+
+      .sticker-other {
+    display: none;
+  }
+
+.sticker {
+    padding: 10px;
+    height: auto;         /* Make it shrink to fit */
+    min-height: 0;        /* Cancel any min-height */
+    max-height: none;     /* Cancel any max-height */
+    overflow: hidden;     /* Prevent overflow */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  /* Hide all children except the name */
+  .sticker > *:not(.sticker-name) {
+    display: none;
+    height: 100px;
+  }
 
     .column_project {
     width: 100%;
