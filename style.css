@@ -569,6 +569,7 @@ li {
 .project-gallery__img--portrait {
   grid-column: span 1;
 }
+
 @media (max-width: 900px) {
   .project-gallery__img--portrait {
     grid-column: span 2;
