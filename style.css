@@ -61,10 +61,11 @@ nav{
 
 .container.chat {
   font-family: helvetica neue, helvetica, sans-serif;
+  font-size: 14px;
   width: 25%;
   padding: 0;
   height: 200px;
-  color: orange;
+  color: black;
   border: 1px;
   position: right;
 
@@ -72,9 +73,8 @@ nav{
 
 /* Right columns */
 .stickers-column {
-  display: flex;
   flex-direction: column;
-  gap: 10px; !important;
+  gap: 0px; !important;
   flex: 1 1 300px; /* growable and shrinkable */
   min-width: 300px;
   max-width: 480px;
@@ -87,6 +87,8 @@ nav{
   border: thin solid blue;
   padding: 10px;
   color: blue;
+  height: 50px;
+  overflow: hidden;
 }
 
 /* Green "I would like to" stickers */
@@ -95,6 +97,8 @@ nav{
   border: thin solid green;
   padding: 10px;
   color: green;
+    height: 50px;
+    overflow: hidden;
 }
 
 p {
