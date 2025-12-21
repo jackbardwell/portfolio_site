@@ -16,11 +16,11 @@
 
 header{
   font-family: helvetica neue, helvetica, sans-serif;;
-  font-size: 18px;
-  padding-top:20px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  font-size: 16px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 30px;
   line-height: 26px;
   color:#0F0F0F;
   width: 100%;
@@ -39,7 +39,7 @@ nav{
 .stickers {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px; /* gutter between columns */
+  gap: 10px; /* gutter between columns */
   align-items: flex-start;
   box-sizing: border-box;
 }
@@ -53,11 +53,21 @@ nav{
 /* Left sticker */
 .sticker {
   background-color: yellow;
-  border-radius: 10px;
   padding: 20px;
-  min-height: 180px;
+  min-height: 160px;
   box-sizing: border-box;
   overflow: hidden;
+}
+
+.container.chat {
+  font-family: helvetica neue, helvetica, sans-serif;
+  width: 25%;
+  min-height: 160px;
+  border: solid 1px;
+  color: #FF8000;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
 }
 
 /* Right columns */
@@ -75,7 +85,6 @@ nav{
 .sticker_2 {
   font-size: 16px;
   border: thin solid blue;
-  border-radius: 10px;
   padding: 10px;
   color: blue;
 }
@@ -84,7 +93,6 @@ nav{
 .sticker_3 {
   font-size: 16px;
   border: thin solid green;
-  border-radius: 10px;
   padding: 10px;
   color: green;
 }
@@ -122,7 +130,7 @@ footer {
 
 
 main {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 a.text {
@@ -142,7 +150,7 @@ a {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   padding: 20px;
   float: left;
 }
@@ -152,53 +160,51 @@ a {
 }
 
 .container.left {
-width: 75%;
+width: 100%;
 
 }
 
 /* Hover Image Pop-up*/
 
-.hover_img a {
-  position: relative;
+  .hover_img a {
+    position: relative;
+  }
+
+  .hover_img a span {
+    position: fixed; /* Position relative to the viewport */
+    display: none; /* Initially hide the image */
+    z-index: 99;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by half the image dimensions to truly center */
+    border: 1px solid gray; 
+    /* background: #fff; Optional: Add a white background for better visibility */
+    /* padding: 12px; Optional: Add some padding around the image */
+
+    /* box-shadow: 10px 10px 0px rgba(255,255,85,1);  */
+  }
+
+  .hover_img a span img {
+    max-width: 80vw; /* Scale image to fit within 80% of the viewport width */
+    max-height: 80vh; /* Scale image to fit within 80% of the viewport height */
+    display: block; /* Removes extra space reserved for inline images */
+    margin: 0; /* Ensures no margin around the image */
+  }
+
+  .hover_img a:hover span {
+    display: block; /* Show the image on hover */
+  }
+
+  tr:hover .hover_img a span {
+  display: block;
 }
 
-.hover_img a span {
-  position: fixed; /* Position relative to the viewport */
-  display: none; /* Initially hide the image */
-  z-index: 99;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Offset by half the image dimensions to truly center */
-  background: #fff; /* Optional: Add a white background for better visibility */
-  padding: 12px; /* Optional: Add some padding around the image */
-  border: 1px solid #ccc; /* Optional: Add a border */
-  border-radius: 8px; /* Optional: Round the corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
-}
-
-.hover_img a span img {
-  max-width: 80vw; /* Scale image to fit within 80% of the viewport width */
-  max-height: 80vh; /* Scale image to fit within 80% of the viewport height */
-  display: block; /* Removes extra space reserved for inline images */
-  margin: 0; /* Ensures no margin around the image */
-}
-
-.hover_img a:hover span {
-  display: block; /* Show the image on hover */
+tr:hover {
+  background-color: lightgray;
 }
 
 
-.container.chat {
-  font-family: helvetica neue, helvetica, sans-serif;;
-  width: 25%;
-  height: 500px;
-  border: solid 1px;
-  border-radius: 10px;
-  color: #FF8000;
-  margin-top: 70px;
-  margin-bottom: 20px;
 
-}
 
 .row:after {
 
@@ -225,7 +231,6 @@ width: 75%;
   text-align: center;
   vertical-align: middle;
   line-height: 2.5rem;
-  border-radius: 10%;
   height: 2.5rem;
   width: 5rem;
   position:absolute;
@@ -268,19 +273,19 @@ table {
 
 }
 
+
 /* Table data and Table header styling */
 td, th {
   font-family: helvetica neue, helvetica, sans-serif;;
   border-bottom: 1px solid grey; /* Add a hairline between each row */
-  border-top: solid 1px grey;
-  border-radius: 5px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 30px; /* Increase cell padding */
+  border: solid 1px grey;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-left: 10px; 
+  padding-bottom: 10px; /* Increase cell padding */
   text-align: left;
   vertical-align: top;
   line-height: 24px;
-
 
 
 
@@ -288,7 +293,7 @@ td, th {
 /* and a third time here?*/
 
 th {
-  font-size: 18px;
+  font-size: 16px;
   border-top: 1px solid grey;
   font-weight: normal;
 }
@@ -296,7 +301,7 @@ th {
 tbody {
 
   font-family: helvetica neue, helvetica, sans-serif;;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 
@@ -451,7 +456,7 @@ li {
     }
 
     .container.left {
-      padding: 5px;
+      padding: 0px;
     
     }
 
@@ -478,7 +483,6 @@ li {
 
   .sticker {
     background-color: yellow;
-    border-radius: 10px;
     padding-left: 20px;
     padding-top: 20px;
     height: 180px;
