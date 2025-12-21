@@ -79,7 +79,7 @@ nav{
   min-width: 300px;
   max-width: 480px;
   box-sizing: border-box;
-  
+
 }
 
 /* Blue "Working on" stickers */
@@ -283,7 +283,9 @@ table {
 td, th {
   font-family: helvetica neue, helvetica, sans-serif;;
   border-bottom: 1px solid grey; /* Add a hairline between each row */
-  border: solid 1px grey;
+  /* border: solid 1px grey; */
+  border-top: solid 1px grey;
+  border-bottom: solid 1px grey;
   padding-right: 15px;
   padding-top: 10px;
   padding-left: 10px; 
