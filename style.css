@@ -62,11 +62,11 @@ nav{
 .container.chat {
   font-family: helvetica neue, helvetica, sans-serif;
   width: 25%;
-  min-height: 160px;
-  border: solid 1px;
-  color: #FF8000;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  padding: 0;
+  height: 200px;
+  color: orange;
+  border: 1px;
+  position: right;
 
 }
 
