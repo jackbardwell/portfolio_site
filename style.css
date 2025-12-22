@@ -20,7 +20,7 @@ header{
   padding-top:5px;
   padding-bottom: 5px;
   padding-left: 5px;
-  padding-right: 30px;
+  padding-right: 5px;
   line-height: 26px;
   color:#0F0F0F;
   width: 100%;
@@ -60,16 +60,48 @@ nav{
 }
 
 .container.chat {
-  font-family: helvetica neue, helvetica, sans-serif;
-  font-size: 14px;
-  width: 25%;
-  padding: 0;
-  height: 200px;
-  color: black;
-  border: 1px;
-  position: right;
+    list-style: none;
+    margin: 0;
+    width: 400px;
+    height: 500px;
+    overflow-y: auto;
+    background: rgba(214, 214, 214, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius_m);
+    padding: 20px;
+    
 
 }
+
+.draggable {
+     width: 400px;
+    height: 500px;
+    max-width: calc(100vw - var(--spacing_xl));
+    max-height: calc(100vh - var(--spacing_xl));  
+    cursor: move;
+    z-index: 88;
+    position: fixed;  /* important for floating */
+    top: 10%;       /* distance from top */
+    left: 50%;       /* distance from left */
+}
+
+/* .draggable__content {
+    width: 400px;
+    height: 500px;
+    max-width: calc(100vw - var(--spacing_xl));
+    max-height: calc(100vh - var(--spacing_xl));
+} */
+/* 
+.chat__embed {
+    list-style: none;
+    margin: 0;
+    width: 400px;
+    height: 500px;
+    overflow-y: auto;
+    background: white;
+    border-radius: var(--radius_m);
+    padding: var(--spacing_inner-padding);
+} */
 
 /* Right columns */
 .stickers-column {
@@ -135,7 +167,7 @@ footer {
 
 
 main {
-  padding-right: 10px;
+  padding-right: 0px;
 }
 
 a.text {

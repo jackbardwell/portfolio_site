@@ -23,6 +23,44 @@
   fetchLatestArenaBlock('i-would-like-to');
  */
 
+  const dragEl = document.querySelector('.draggable');
+
+  let isDragging = false;
+  let startX, startY;
+  let offsetX = 0;
+  let offsetY = 0;
+
+  dragEl.style.position = 'fixed'; // required for dragging
+
+  dragEl.addEventListener('mousedown', (e) => {
+    isDragging = true;
+
+    startX = e.clientX;
+    startY = e.clientY;
+
+    const rect = dragEl.getBoundingClientRect();
+    offsetX = rect.left;
+    offsetY = rect.top;
+
+    dragEl.style.cursor = 'grabbing';
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+
+    const x = offsetX + (e.clientX - startX);
+    const y = offsetY + (e.clientY - startY);
+
+    dragEl.style.left = `${x}px`;
+    dragEl.style.top = `${y}px`;
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    dragEl.style.cursor = 'move';
+  });
+
+
 function fetchArenaBlocks(channelSlug, blockCount = 3) {
   const apiUrl = `https://api.are.na/v2/channels/${channelSlug}?per=${blockCount}`;
 
