@@ -17,9 +17,9 @@
 header{
   font-family: helvetica neue, helvetica, sans-serif;;
   font-size: 16px;
-  padding-top:10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  padding-top:5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
   padding-right: 30px;
   line-height: 26px;
   color:#0F0F0F;
@@ -156,7 +156,7 @@ a {
 
 .container {
   width: 100%;
-  padding: 20px;
+  padding: 5px;
   float: left;
 }
 
@@ -183,6 +183,7 @@ width: 100%;
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Offset by half the image dimensions to truly center */
     border: 1px solid gray; 
+     pointer-events: none;
     /* background: #fff; Optional: Add a white background for better visibility */
     /* padding: 12px; Optional: Add some padding around the image */
 
