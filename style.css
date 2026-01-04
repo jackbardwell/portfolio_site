@@ -205,6 +205,7 @@ width: 100%;
 
   .hover_img a {
     position: relative;
+
   }
 
   .hover_img a span {
@@ -218,7 +219,7 @@ width: 100%;
      pointer-events: none;
     /* background: #fff; Optional: Add a white background for better visibility */
     /* padding: 12px; Optional: Add some padding around the image */
-
+    box-shadow: 0 0 20px 20px white inset;
     /* box-shadow: 10px 10px 0px rgba(255,255,85,1);  */
   }
 
@@ -373,8 +374,8 @@ img {
   padding-right: 20px;
   float: left;
   width: 50%;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 20px;
   border-top: 1px solid grey;
   overflow: hidden;
 
@@ -386,7 +387,7 @@ img {
 
 .details {
 font-family: helvetica neue, helvetica, sans-serif;;
-font-size: 18px;
+font-size: 16px;
 font-style: italic;
 border-top: 1px solid grey;
 padding-top: 16px;
@@ -409,6 +410,8 @@ border-top: none;
   border-radius: 0px;
   border: 1px solid grey;
   padding-right: 40px;
+
+
 }
 
 
@@ -417,11 +420,12 @@ border-top: none;
 
   font-color: #0F0F0F;
   font-family: helvetica neue, helvetica, sans-serif;;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 20px;
   padding:5px;
   border-radius: 0px;
   cursor: pointer;
+
 }
 
 
