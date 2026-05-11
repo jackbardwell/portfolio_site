@@ -61,34 +61,40 @@
   });
 
 
-function fetchArenaBlocks(channelSlug, blockCount = 3) {
+function fetchArenaTicker(channelSlug, elementClass, blockCount = 3) {
   const apiUrl = `https://api.are.na/v2/channels/${channelSlug}?per=${blockCount}`;
 
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      const textBlocks = data.contents
+
+      const textBlocks = (data.contents || [])
         .filter(block => block.class === 'Text')
         .slice(0, blockCount);
 
-      const arenaColumn = document.querySelector('.arena-column');
-      // Remove old .sticker_3 blocks only, leave the "I would like to" heading
-      const oldStickers = arenaColumn.querySelectorAll('.sticker_3');
-      oldStickers.forEach(el => el.remove());
+      const ticker = document.querySelector(`.${elementClass}`);
 
-      textBlocks.forEach(block => {
-        const div = document.createElement('div');
-        div.classList.add('sticker_3');
-        div.textContent = block.content || '(Empty block)';
-        arenaColumn.appendChild(div);
-      });
+      if (!ticker) {
+        console.error(`Ticker element not found (.${elementClass})`);
+        return;
+      }
+
+      const tickerText = textBlocks
+        .map(block => (block.content || '').replace(/\n/g, ' '))
+        .join('\u00A0\u00A0\u00A0✶\u00A0\u00A0\u00A0');
+
+      ticker.textContent =
+        `${tickerText}\u00A0\u00A0\u00A0✶\u00A0\u00A0\u00A0${tickerText}`;
     })
     .catch(error => {
       console.error('Error fetching Are.na content:', error);
     });
 }
 
-fetchArenaBlocks('i-would-like-to', 3);
+
+fetchArenaTicker('i-would-like-to', 'manifesting_ticker', 3);
+fetchArenaTicker('currently-working-on-pr-axf7hkuc', 'working_ticker', 3);
+
 
 window.addEventListener('load', function() {
   var typeSelector = document.getElementById("type-selector");

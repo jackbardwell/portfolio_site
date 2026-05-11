@@ -13,36 +13,102 @@
   box-sizing: border-box;
 }
 
+body{ 
+
+  margin: 0;
+  padding:0;
+
+}
+
+
+
+.info_block{
+position: fixed;
+width: 100vw;
+margin: 0;
+z-index: 10;
+background: white;
+}
+
 
 header{
-  font-family: helvetica neue, helvetica, sans-serif;;
-  font-size: 16px;
-  padding-top:5px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  line-height: 26px;
-  color:#0F0F0F;
+  font-family: helvetica neue, helvetica, sans-serif;
+  font-size: 18px;
+  background: yellow;
   width: 100%;
-  text-align: top;
-     /* -webkit-font-smoothing: none;
-/*position: sticky;*/
-/*top: 0px;*/
-/*border: 1px;*/
+  color: black;
+  text-align: left;
+  z-index: 10;
+  margin: 0px;
+  padding: 5px 10px;
 }
+
+nav{
+
+  padding-right: 20px;
+}
+
+.tickerbar {
+  display: flex;
+  font-family: helvetica neue, helvetica, sans-serif;
+  background: lightgray;
+  font-size: 18px;
+}
+
+.ticker {
+  flex: 3;                 /* instead of width: 50% */
+  position: relative;      /* allows label to sit on top */
+  padding: 5px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: hidden;
+  display: flex;
+}
+
+.manifesting_ticker, .working_ticker {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  animation-name: marquee;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-direction: normal;
+
+}
+
+
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.orange {
+  background-color: orange;
+  flex:1;
+  z-index: 10;
+
+}
+
+.blue {
+  background: mediumseagreen;
+  flex:1;
+  z-index: 10;
+}
+
 
 nav{
   align: top;
 }
 
 /* Main container */
-.stickers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px; /* gutter between columns */
-  align-items: flex-start;
-  box-sizing: border-box;
-}
 
 /* Left fixed column */
 .fixed-column {
@@ -50,14 +116,6 @@ nav{
   max-width: 480px;
 }
 
-/* Left sticker */
-.sticker {
-  background-color: yellow;
-  padding: 20px;
-  min-height: 160px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
 
 .container.chat {
     list-style: none;
@@ -85,58 +143,62 @@ nav{
     left: 50%;       /* distance from left */
 }
 
-/* .draggable__content {
-    width: 400px;
-    height: 500px;
+.draggable.sticker {
+     width: 450px;
+    height: 200px;
     max-width: calc(100vw - var(--spacing_xl));
-    max-height: calc(100vh - var(--spacing_xl));
-} */
-/* 
-.chat__embed {
-    list-style: none;
-    margin: 0;
-    width: 400px;
-    height: 500px;
-    overflow-y: auto;
-    background: white;
-    border-radius: var(--radius_m);
-    padding: var(--spacing_inner-padding);
-} */
-
-/* Right columns */
-.stickers-column {
-  flex-direction: column;
-  gap: 0px; !important;
-  flex: 1 1 300px; /* growable and shrinkable */
-  min-width: 300px;
-  max-width: 480px;
-  box-sizing: border-box;
-
+    max-height: calc(100vh - var(--spacing_xl));  
+    cursor: move;
+    z-index: 88;
+    position: fixed;  /* important for floating */
+    top: 60%;       /* distance from top */
+    left: 20%;       /* distance from left */
 }
 
-/* Blue "Working on" stickers */
-.sticker_2 {
-  font-size: 16px;
-  border: thin solid blue;
-  padding: 10px;
-  color: blue;
-  height: 50px;
+.draggable.sticker_go {
+     width: 440px;
+    height: 500px;
+    max-width: calc(100vw - var(--spacing_xl));
+    max-height: calc(100vh - var(--spacing_xl));  
+    cursor: move;
+    z-index: 88;
+    position: fixed;  /* important for floating */
+    top: 10%;       /* distance from top */
+    left: 10%;       /* distance from left */
+}
+
+/* Right columns */
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
   overflow: hidden;
 }
 
-/* Green "I would like to" stickers */
-.sticker_3 {
-  font-size: 16px;
-  border: thin solid green;
-  padding: 10px;
-  color: green;
-    height: 50px;
-    overflow: hidden;
+/* Tooltip overlay */
+.tooltiptext {
+  position: absolute;
+  inset: 0;                        /* fills parent sticker exactly */
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-align: center;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+}
+
+/* Hover → remove blur */
+.tooltip:hover .tooltiptext {
+  opacity: 0;
 }
 
 p {
 font-family: helvetica neue, helvetica, sans-serif;;
-  
 }
 
 nav {
@@ -168,6 +230,10 @@ footer {
 
 main {
   padding-right: 0px;
+  padding-top: 88px;
+  margin: 5px;
+  margin-top: 0px;
+
 }
 
 a.text {
@@ -574,7 +640,22 @@ li {
   }
 
   .stickers-column {
+    display: block;
+    max-height: 2.2em;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+    .stickers-column .sticker_2,
+  .stickers-column .sticker_3 {
     display: none;
+  }
+
+    .tooltiptext {
+    opacity: 1;
+    backdrop-filter: none;
+    background: none;
+    font-weight: bold;
   }
 
     .fixed-column {
